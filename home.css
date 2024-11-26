@@ -4,6 +4,11 @@
     src: url(LuckiestGuy-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Pro';
+    src: url(Product\ Sans\ Bold.ttf);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -68,7 +73,7 @@ nav {
     bottom: 0; /* Position at the bottom of the link */
     width: 100%; /* Full width of the link */
     height: 100%; /* Full height of the link */
-    background-color: rgb(134, 255, 255); /* Background color */
+    background-color: rgb(135, 241, 131); /* Background color */
     transform: scaleY(0); /* Initially scale down to 0 */
     transform-origin: bottom; /* Scale from the bottom */
     transition: all 0.5s ease; /* Smooth transition for scaling */
@@ -92,8 +97,32 @@ nav {
     text-align: center;
 }
 
+.hero h1 {
+    font-family: bold;
+    font-size   : 30px;
+
+}   
+
+.package-name {
+    font-family: 'pro'; /* Use the 'Lucky' font */
+    font-weight: bold; /* Make it bold if desired */
+    color: #ffffff;
+}
+
+.Package {
+    font-family: 'lucky'; /* Use the 'Lucky' font */
+    font-weight: bold; /* Make it bold if desired */
+    color: #6d6d6d;
+    background-color: rgb(134, 255, 255); /* Background color */
+    padding: 5px 10px; /* Add some padding for spacing */
+    border-radius: 10px; /* Rounded corners */
+    position: relative; /* Positioning context */
+    z-index: 1; /* Ensure it is above other elements */
+}
+
+
 .Hero-button {
-    background-color: #86ffff; /* Call to action button color */
+    background-color: #d4e4a9; /* Call to action button color */
     color: rgb(53, 53, 53);
     padding: 15px 30px;
     border: none;
@@ -155,22 +184,67 @@ nav {
 }
 
 .bubble {
-    background-color: #2e2e2e34; /* Light blue background */
-    border-radius: 20px; /* Rounded corners */
-    padding: 20px; /* Space inside the bubble */
-    margin: 20px auto; /* Space outside the bubble and center it */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    max-width: 500px; /* Limit the maximum width */
-    display: flex; /* Enable flexbox */
-    flex-direction: column; /* Stack children vertically */
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text within the bubble */
+    background-color: #2e2e2e34; 
+    border-radius: 20px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    max-width: 500px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
     transition: all 0.3s ease;
 }
 
+.innerBubble {
+    background-color: #2e2e2e34; 
+    border-radius: 20px; 
+    padding: 20px; 
+    margin: 20px auto; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+    max-width: 500px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    transition: all 0.3s ease;
+}
+
+.innerBubble:hover{
+    background-color: #2e2e2e75;
+
+}
+
+.innerBubble a {
+    background-color: #4024c0; /* Call to action button color */
+    color: rgb(185, 185, 185);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    font-family: Lucky;
+    font-size: large;
+}
+
+.innerBubble a:hover {
+    background-color: #7e7e7e; /* Call to action button color */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 .bubble:hover {
     background-color: #2e2e2e75;
+    transform: scale(1.02);
 }
 
 
