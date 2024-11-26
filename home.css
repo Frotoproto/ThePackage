@@ -81,6 +81,7 @@ nav {
     z-index: 2; /* Place behind the text */
     border-radius: 10px; /* Curved edges for the background */
     padding: 5px, 5px; /* Add padding to make the background larger */
+    z-index: -2;
 }
 
 .nav-links a:hover {
