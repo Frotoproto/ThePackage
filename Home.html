@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePackage - Product Page</title>
+    <link rel="stylesheet" href="home.css"> <!-- Link to external CSS file -->
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Logo.png" alt="ThePackage Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to ThePackage</h1>
+            <p>Your one-stop solution for affordable editing services!</p>
+            <a href="#pricing" class="Hero-button">Learn More</a>
+        </section>
+
+        <div class="features bubble" id="features">
+            <h2>The Pros</h2>
+            <ul>
+                <li>-High-quality video editing</li>
+                <li>-<strong>Professional</strong> motion graphics</li>
+                <li>-<strong>Custom thumbnails</strong> included also!</li>
+                <li>-We do our best as a team.</li>
+            </ul>
+        </div>
+
+        <div class="pricing bubble" id="pricing">
+            <h2>Pricing</h2>
+            <p>Only <strong>$7</strong> for the complete package!</p>
+            <a href="#" class="purchase-button">Purchase Now</a>
+        </div>
+
+        <div class="contact bubble" id="contact">
+            <h2>Contact Me</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+            <a href="https://mail.google.com/mail/u/0/?fs=1&to=jccloud1233@gmail.com&su=Enquiry&tf=cm">Email</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ThePackage. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function scrollToElement(event) {
+            event.preventDefault(); // Prevent the default anchor click behavior
+    
+            const targetId = event.currentTarget.getAttribute('href'); // Get the target ID from the href
+            const targetElement = document.querySelector(targetId); // Select the target element
+            const elementPosition = targetElement.getBoundingClientRect().top; // Get the position of the target element
+            const offsetPosition = elementPosition + window.pageYOffset - (window.innerHeight / 2) + (targetElement.offsetHeight / 2); // Calculate the offset to center
+    
+            window.scrollTo({
+                top: offsetPosition,
+            });
+        }
+    
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', scrollToElement);
+        });
+    </script>
+
+</body>
+</html>

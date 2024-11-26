@@ -1,0 +1,211 @@
+
+@font-face {
+    font-family: 'Lucky';
+    src: url(LuckiestGuy-Regular.ttf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #000000;
+}
+
+header {
+    background-color: rgba(119, 119, 119, 0.6); /* Slightly lighter background for the bubble effect */
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    margin: 20px; /* Add some space around the header */
+    backdrop-filter: blur(10px);
+    position: fixed; /* Make the header fixed */
+    width: calc(100% - 75px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.158), 0 0 30px rgba(0, 0, 0, 0.219);
+    border: 2px solid #7777773a
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 100px; /* Limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for the transform property */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Scale the logo to 110% of its original size on hover */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px; /* Space between nav items */
+}
+
+.nav-links a {
+    position: relative; /* Positioning context for the pseudo-element */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.5s ease; /* Transition for text color */
+    padding: 10px 15px; /* Add padding to the link for better spacing */
+}
+
+.nav-links a::after {
+    content: ''; /* Necessary for the pseudo-element */
+    position: absolute; /* Position it relative to the link */
+    left: 0;
+    bottom: 0; /* Position at the bottom of the link */
+    width: 100%; /* Full width of the link */
+    height: 100%; /* Full height of the link */
+    background-color: rgb(134, 255, 255); /* Background color */
+    transform: scaleY(0); /* Initially scale down to 0 */
+    transform-origin: bottom; /* Scale from the bottom */
+    transition: all 0.5s ease; /* Smooth transition for scaling */
+    z-index: -1; /* Place behind the text */
+    border-radius: 10px; /* Curved edges for the background */
+    padding: 5px, 5px; /* Add padding to make the background larger */
+}
+
+.nav-links a:hover {
+    color: #505050; /* Change text color on hover */
+}
+
+.nav-links a:hover::after {
+    transform: scaleY(1); /* Scale up to full height on hover */
+}
+
+.hero {
+    background: url('timine_1.2.3.jpg') no-repeat center center/cover; /* Add a background image */
+    color: white;
+    padding: 300px 20px;
+    text-align: center;
+}
+
+.Hero-button {
+    background-color: #86ffff; /* Call to action button color */
+    color: rgb(53, 53, 53);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    font-family: Lucky;
+    font-size: large;
+}
+
+.Hero-button:hover {
+    background-color: #7e7e7e; /* Call to action button color */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact a {
+    background-color: #754848; /* Call to action button color */
+    color: rgb(184, 184, 184);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    font-family: Lucky;
+    font-size: large;
+}
+
+.contact a:hover {
+    background-color: #26462b; /* Call to action button color */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.features, .pricing, .contact {
+    padding: 50px 20px;
+    text-align: center;
+    color: rgb(197, 197, 197);
+}
+
+.features h2, .pricing h2, .contact h2 {
+    margin-bottom: 20px;
+    font-family: Lucky;
+}
+
+.features li {
+    text-align: left;
+
+}
+
+.bubble {
+    background-color: #2e2e2e34; /* Light blue background */
+    border-radius: 20px; /* Rounded corners */
+    padding: 20px; /* Space inside the bubble */
+    margin: 20px auto; /* Space outside the bubble and center it */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    max-width: 500px; /* Limit the maximum width */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text within the bubble */
+    transition: all 0.3s ease;
+}
+
+.bubble:hover {
+    background-color: #2e2e2e75;
+}
+
+
+.features ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+}
+
+.purchase-button {
+    background-color: #86ffff; /* Call to action button color */
+    color: rgb(53, 53, 53);
+    padding: 15px 30px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    font-family: Lucky;
+    font-size: large;
+}
+
+.purchase-button:hover {
+    background-color: #7e7e7e; /* Call to action button color */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #3333331c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
