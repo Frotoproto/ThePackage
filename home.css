@@ -377,4 +377,8 @@ footer {
         transform: translateX(-50%); /* Adjust to center it correctly */
     }
 
+
+    .arrow {
+        visibility: collapse;
+    }
 }

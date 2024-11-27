@@ -105,8 +105,10 @@
     // Set the initial background image
     changeBackground();
 
-    // Change the background every 5 seconds
-    setInterval(nextImage, 5000);
+    // Automatically change the background every 5 seconds only on larger screens
+    if (window.innerWidth > 623) {
+        setInterval(nextImage, 5000);
+    }
     </script>
 
 </body>
