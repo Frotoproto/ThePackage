@@ -123,6 +123,29 @@ nav {
     z-index: 0; /* Ensure it is above other elements */
 }
 
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px; /* Adjust size as needed */
+    color: white; /* Arrow color */
+    cursor: pointer; /* Pointer cursor on hover */
+    z-index: 1; /* Ensure arrows are above other elements */
+    user-select: none; /* Prevent text selection */
+    transition: all 0.7s ease;
+}
+
+.arrow:hover {
+   color: #000000;
+}
+
+.left-arrow {
+    left: 20px; /* Position on the left */
+}
+
+.right-arrow {
+    right: 20px; /* Position on the right */
+}
 
 .Hero-button {
     background-color: #d4e4a9; /* Call to action button color */
