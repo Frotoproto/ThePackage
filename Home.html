@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ThePackage - Product Page</title>
     <link rel="stylesheet" href="home.css"> <!-- Link to external CSS file -->
+    <meta name="description" content="ThePackage we build and serve offers high quality creations such as video editing, motion graphics and your thumbnail ALL in One affordable package. The Package is only $7!">
+    <meta name="keywords" content="FrameForge, Forge, Frame, Design Service, Video Editing, 3D Modeling, Motion Graphics, Motion, Online Editing, Editing, Hire, Up for hire, Cheap service, cheap editing, cheap, editing, premnium editing no scam, how to edit videos, how to edit videos on capcut, Package, ThePackage, Editing Package, more, hello, cool, ThePackage video editing service, ThePackage Video, ThePackage video editing">
     
 </head>
 <body>
@@ -23,12 +25,11 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to <span class="package-name">The</span><span class="Package">package</span></h1>
-            <p>Your one-stop solution for affordable editing services!</p>
-            <a href="#pricing" class="Hero-button">Learn More</a>
-        </section>
+    <section class="hero" id="hero">
+        <h1>Welcome to <span class="package-name">The</span><span class="Package">package</span></h1>
+        <p>Your one-stop solution for an affordable editing service!</p>
+        <a href="#pricing" class="Hero-button">Learn More</a>
+    </section>
 
         <div class="features bubble" id="features">
             <h2>The Pros</h2>
@@ -80,6 +81,19 @@
         navLinks.forEach(link => {
             link.addEventListener('click', scrollToElement);
         });
+
+        const hero = document.getElementById('hero');
+    const images = ['timine_1.2.3.jpg', 'back2.png'];
+    let currentIndex = 0;
+
+    function changeBackground() {
+        currentIndex = (currentIndex + 1) % images.length; // the imgs
+        hero.style.backgroundImage = `url('${images[currentIndex]}')`;
+    }
+
+    hero.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+    setInterval(changeBackground, 5000);
     </script>
 
 </body>

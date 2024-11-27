@@ -93,7 +93,8 @@ nav {
 }
 
 .hero {
-    background: url('timine_1.2.3.jpg') no-repeat center center/cover; /* Add a background image */
+    transition: background-image 1s ease-in-out; /* Smooth transition for background image */
+    background-size: cover; /* Ensure the background covers the entire area */
     color: white;
     padding: 300px 20px;
     text-align: center;
