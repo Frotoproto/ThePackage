@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ThePackage - Welcome</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ThePackage we build and serve offers high quality creations such as video editing, motion graphics and your thumbnail ALL in One affordable package. The Package is only $7!">
+    <meta name="keywords" content="FrameForge, Forge, Frame, Design Service, Video Editing, 3D Modeling, Motion Graphics, Motion, Online Editing, Editing, Hire, Up for hire, Cheap service, cheap editing, cheap, editing, premnium editing no scam, how to edit videos, how to edit videos on capcut, Package, ThePackage, Editing Package, more, hello, cool, ThePackage video editing service, ThePackage Video, ThePackage video editing">
+    <link rel="stylesheet" href="Start.css">
+    <title>Document</title>
+    <style>
+        @font-face {
+    font-family: 'Lucky';
+    src: url(LuckiestGuy-Regular.ttf);
+}
+        .content {
+            opacity: 0; /* Initially hide the button */
+            transition: opacity 0.5s ease; /* Smooth transition for opacity */
+        }
+        .content.show {
+            opacity: 1; /* Fully visible when the class is added */
+        }
+        .skip-button {
+            position: fixed; /* Fixed position */
+            bottom: 20px; /* Distance from the bottom */
+            right: 20px; /* Distance from the right */
+            padding: 20px 40px; /* Padding for the button */
+            background-color: #d1d1d157; /* Button color */
+            color: white; /* Text color */
+            border: white; /* No border */
+            border-radius: 10px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            z-index: 1000; /* Ensure it is above other elements */
+            border-width: 2px;
+            font-family: Lucky;
+            transition: all 0.7s ease;
+            backdrop-filter: blur(50px);
+        }
+        .skip-button:hover {
+            background-color: #52525257; /* Darker shade on hover */
+            border-radius: 50px;
+        }
+
+        *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;    /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center;      /* Center text (if any) */
+}
+.content h1{
+    font-size: 95px;
+    color: #fff;
+    margin-bottom: 50px;
+    font-family: product sans;
+}
+
+.content a {
+    font-size: 23px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #85fefe;
+    padding: 15px 25px;
+    border-radius: 50px;
+    transition: all 0.7s ease;
+    font-family: product sans;
+    transform: translateY(170px); /* Moves the element down by 50 pixels */
+    font-family: Lucky;
+}
+
+
+.content a:hover{
+    background-color: #525252;
+    color: #fafafa;
+    border-radius: 20px;
+}
+
+.background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
+    </style>
+</head>
+<body>
+    
+    <link rel="preload" href="my image" as="image">
+
+    <div class="container">
+
+        <video autoplay muted playsinline class="background-clip" id="background-video">
+            <source src="video.mov" type="video/mp4">
+        </video>
+
+        <div class="content" id="explore-button">
+            <a href="Home.html">Explore Now</a>
+        </div>
+
+        <button class="skip-button" id="skip-button" >Skip</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('background-video');
+        const button = document.getElementById('explore-button');
+        const skipButton = document.getElementById('skip-button');
+
+video.addEventListener('ended', function() {
+    button.classList.add('show'); // Show the explore button when the video ends
+});
+
+skipButton.addEventListener('click', function() {
+    video.currentTime = video.duration; // Set the video to the end
+    video.pause(); // Pause the video if needed
+    button.classList.add('show'); // Show the explore button when the skip button is clicked
+    skipButton.style.display = 'none'; // Hide the skip button
+});
+    </script>
+
+</body>
+</html>

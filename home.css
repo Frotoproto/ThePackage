@@ -1,7 +1,12 @@
 
 @font-face {
     font-family: 'Lucky';
-    src: url(LuckiestGuy-Regular.ttf);
+    src: url(Turnpike.ttf);
+}
+
+@font-face {
+    font-family: 'Turn';
+    src: url(Turnpike.ttf);
 }
 
 @font-face {
@@ -40,7 +45,7 @@ nav {
 }
 
 .logo img {
-    max-width: 100px; /* Limit the maximum width */
+    max-width: 200px; /* Limit the maximum width */
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s ease; /* Smooth transition for the transform property */
 }
@@ -74,7 +79,7 @@ nav {
     bottom: 0; /* Position at the bottom of the link */
     width: 100%; /* Full width of the link */
     height: 100%; /* Full height of the link */
-    background-color: rgb(135, 241, 131); /* Background color */
+    background-color: rgb(125, 155, 184); /* Background color */
     transform: scaleY(0); /* Initially scale down to 0 */
     transform-origin: bottom; /* Scale from the bottom */
     transition: all 0.5s ease; /* Smooth transition for scaling */
@@ -101,27 +106,12 @@ nav {
 }
 
 .hero h1 {
-    font-family: bold;
+    font-family: turn;
     font-size   : 60px;
 
 }   
 
-.package-name {
-    font-family: 'pro'; /* Use the 'Lucky' font */
-    font-weight: bold; /* Make it bold if desired */
-    color: #ffffff;
-}
 
-.Package {
-    font-family: 'lucky'; /* Use the 'Lucky' font */
-    font-weight: bold; /* Make it bold if desired */
-    color: #6d6d6d;
-    background-color: rgb(134, 255, 255); /* Background color */
-    padding: 5px 10px; /* Add some padding for spacing */
-    border-radius: 10px; /* Rounded corners */
-    position: relative; /* Positioning context */
-    z-index: 0; /* Ensure it is above other elements */
-}
 
 .arrow {
     position: absolute;
@@ -148,8 +138,8 @@ nav {
 }
 
 .Hero-button {
-    background-color: #d4e4a9; /* Call to action button color */
-    color: rgb(53, 53, 53);
+    background-color: #66a396; /* Call to action button color */
+    color: rgb(0, 0, 0);
     padding: 15px 30px;
     border: none;
     border-radius: 15px;
@@ -159,6 +149,7 @@ nav {
     font-family: Lucky;
     font-size: large;
 }
+
 
 .Hero-button:hover {
     background-color: #7e7e7e; /* Call to action button color */

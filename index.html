@@ -1,151 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ThePackage - Welcome</title>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ThePackage we build and serve offers high quality creations such as video editing, motion graphics and your thumbnail ALL in One affordable package. The Package is only $7!">
-    <meta name="keywords" content="FrameForge, Forge, Frame, Design Service, Video Editing, 3D Modeling, Motion Graphics, Motion, Online Editing, Editing, Hire, Up for hire, Cheap service, cheap editing, cheap, editing, premnium editing no scam, how to edit videos, how to edit videos on capcut, Package, ThePackage, Editing Package, more, hello, cool, ThePackage video editing service, ThePackage Video, ThePackage video editing">
-    <link rel="stylesheet" href="Start.css">
-    <title>Document</title>
-    <style>
-        @font-face {
-    font-family: 'Lucky';
-    src: url(LuckiestGuy-Regular.ttf);
-}
-        .content {
-            opacity: 0; /* Initially hide the button */
-            transition: opacity 0.5s ease; /* Smooth transition for opacity */
-        }
-        .content.show {
-            opacity: 1; /* Fully visible when the class is added */
-        }
-        .skip-button {
-            position: fixed; /* Fixed position */
-            bottom: 20px; /* Distance from the bottom */
-            right: 20px; /* Distance from the right */
-            padding: 20px 40px; /* Padding for the button */
-            background-color: #d1d1d157; /* Button color */
-            color: white; /* Text color */
-            border: white; /* No border */
-            border-radius: 10px; /* Rounded corners */
-            cursor: pointer; /* Pointer cursor on hover */
-            z-index: 1000; /* Ensure it is above other elements */
-            border-width: 2px;
-            font-family: Lucky;
-            transition: all 0.7s ease;
-            backdrop-filter: blur(50px);
-        }
-        .skip-button:hover {
-            background-color: #52525257; /* Darker shade on hover */
-            border-radius: 50px;
-        }
-
-        *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-}
-
-.container{
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.content {
-    display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center;    /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    text-align: center;      /* Center text (if any) */
-}
-.content h1{
-    font-size: 95px;
-    color: #fff;
-    margin-bottom: 50px;
-    font-family: product sans;
-}
-
-.content a {
-    font-size: 23px;
-    color: #fff;
-    text-decoration: none;
-    border: 2px solid #85fefe;
-    padding: 15px 25px;
-    border-radius: 50px;
-    transition: all 0.7s ease;
-    font-family: product sans;
-    transform: translateY(170px); /* Moves the element down by 50 pixels */
-    font-family: Lucky;
-}
-
-
-.content a:hover{
-    background-color: #525252;
-    color: #fafafa;
-    border-radius: 20px;
-}
-
-.background-clip{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-}
-
-@media (min-aspect-ratio:16/9) {
-    .background-clip{
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio:16/9) {
-    .background-clip{
-        width: auto;
-        height: 100%;
-    }
-}
-    </style>
+    <title>Augmented</title>
+    <link rel="stylesheet" href="home.css"> <!-- Link to external CSS file -->
+    <meta name="description" content="Augmented offers High-quality advertisment and/or Promo Videos. We help anyone from small or big orginizations/events.">
+    
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Logo.png" alt="Augmented">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" id="hero">
     
-    <link rel="preload" href="my image" as="image">
+        <h1>Augmented</h1>
+        <a href="#pricing" class="Hero-button">Learn More</a>
+    </section>
 
-    <div class="container">
-
-        <video autoplay muted playsinline class="background-clip" id="background-video">
-            <source src="video.mov" type="video/mp4">
-        </video>
-
-        <div class="content" id="explore-button">
-            <a href="Home.html">Explore Now</a>
+        <div class="features bubble" id="features">
+            <h2>The Pros</h2>
+            <ul>
+                <li>-<strong>Low Costs; Strong Demands</strong></li>
+                <li>-<strong>Reliable and trustworthy</strong></li>
+                <li>-<strong>Custom Requirements</strong> accepted!</li>
+            
+            </ul>
         </div>
 
-        <button class="skip-button" id="skip-button" >Skip</button>
-    </div>
+        <div class="pricing bubble" id="pricing">
+            <h2>Pricing</h2>
+            <p>Starting at <strong>$50</strong> and could extend up to $100 for more</p>
+            <a href="https://cash.app/$TR1xui0" class="purchase-button">Purchase Now</a>
+            <div class="innerBubble" id="contact">
+                <h2>Communication</h2>
+                <a href="Communication.html">Find</a>
+            </div>
+        </div>
+
+        <div class="contact bubble" id="contact">
+            <h2>Email Us</h2>
+            <p>If you have any questions, feel free to reach out!</p>
+            <a href="https://mail.google.com/mail/u/0/?fs=1&to=jccloud1233@gmail.com&su=Enquiry&tf=cm">Email</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 ThePackage. All rights reserved.</p>
+    </footer>
 
     <script>
-        const video = document.getElementById('background-video');
-        const button = document.getElementById('explore-button');
-        const skipButton = document.getElementById('skip-button');
+        function scrollToElement(event) {
+            event.preventDefault(); // Prevent the default anchor click behavior
+    
+            const targetId = event.currentTarget.getAttribute('href'); // Get the target ID from the href
+            const targetElement = document.querySelector(targetId); // Select the target element
+            const elementPosition = targetElement.getBoundingClientRect().top; // Get the position of the target element
+            const offsetPosition = elementPosition + window.pageYOffset - (window.innerHeight / 2) + (targetElement.offsetHeight / 2); // Calculate the offset to center
+    
+            window.scrollTo({
+                top: offsetPosition,
+            });
+        }
+    
+        const navLinks = document.querySelectorAll('.nav-links a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', scrollToElement);
+        });
 
-video.addEventListener('ended', function() {
-    button.classList.add('show'); // Show the explore button when the video ends
-});
+        const hero = document.getElementById('hero');
+    const images = ['timine_1.2.3.jpg', 'back2.png'];
+    let currentIndex = 0;
 
-skipButton.addEventListener('click', function() {
-    video.currentTime = video.duration; // Set the video to the end
-    video.pause(); // Pause the video if needed
-    button.classList.add('show'); // Show the explore button when the skip button is clicked
-    skipButton.style.display = 'none'; // Hide the skip button
-});
+    function changeBackground() {
+        hero.style.backgroundImage = `url('${images[currentIndex]}')`;
+    }
+
+    function nextImage() {
+        currentIndex = (currentIndex + 1) % images.length; // Cycle to the next image
+        changeBackground();
+    }
+
+    function prevImage() {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // Cycle to the previous image
+        changeBackground();
+    }
+
+    // Set the initial background image
+    changeBackground();
+
+    // Automatically change the background every 5 seconds only on larger screens
+    if (window.innerWidth > 623) {
+        setInterval(nextImage, 5000);
+    }
     </script>
 
 </body>
