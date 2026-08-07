@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePackage — Intro</title>
+    <meta name="description" content="A short intro film for ThePackage — a small post-production studio for video editing, motion graphics, and thumbnail design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="video.css">
+</head>
+<body class="intro">
+
+<main class="intro__main">
+
+    <video class="intro__video"
+           id="background-video"
+           autoplay muted playsinline preload="auto"
+           aria-hidden="true">
+        <source src="video.mov" type="video/mp4">
+    </video>
+
+    <div class="intro__frame" aria-hidden="true">
+        <div class="intro__corner intro__corner--tl"></div>
+        <div class="intro__corner intro__corner--tr"></div>
+        <div class="intro__corner intro__corner--bl"></div>
+        <div class="intro__corner intro__corner--br"></div>
+    </div>
+
+    <header class="intro__top">
+        <div class="intro__brand">
+            <span class="intro__brand-mark" aria-hidden="true">P</span>
+            <span class="intro__brand-name">ThePackage</span>
+        </div>
+        <p class="intro__meta">
+            <span>Intro film</span>
+            <span class="intro__meta-sep" aria-hidden="true">/</span>
+            <span>00:00</span>
+        </p>
+    </header>
+
+    <div class="intro__content" id="explore-button">
+        <p class="intro__eyebrow">Ready when you are</p>
+        <a class="btn btn--solid intro__cta" href="index.html">
+            Enter the site
+            <span class="btn__arrow" aria-hidden="true">→</span>
+        </a>
+    </div>
+
+    <button class="intro__skip" id="skip-button" type="button">
+        Skip intro
+    </button>
+
+</main>
+
+<script>
+    (function () {
+        var video = document.getElementById('background-video');
+        var button = document.getElementById('explore-button');
+        var skipButton = document.getElementById('skip-button');
+
+        function show() {
+            button.classList.add('is-visible');
+        }
+
+        function hideSkip() {
+            skipButton.style.display = 'none';
+        }
+
+        video.addEventListener('ended', function () {
+            show();
+        });
+
+        video.addEventListener('error', function () {
+            // If the video can't load, still let the user continue.
+            show();
+            hideSkip();
+        });
+
+        skipButton.addEventListener('click', function () {
+            try {
+                video.pause();
+                video.currentTime = video.duration || 0;
+            } catch (e) {
+                // Some browsers throw if duration is Infinity for a stream.
+            }
+            show();
+            hideSkip();
+        });
+    })();
+</script>
+
+</body>
+</html>
